@@ -15,3 +15,15 @@ export const login = async (email:string, password:string) => {
     throw error;
   }
 }
+
+export const signUp = async(email: string, password: string) => {
+  try {
+    const apiRes = await baseAxios.post("/users/create", {
+      email,
+      password,
+    });
+    return {status: apiRes.status, data: apiRes.data.details};
+  } catch (error) {
+    throw error;
+  }
+}

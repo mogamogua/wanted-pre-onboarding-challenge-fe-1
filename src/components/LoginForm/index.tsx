@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../apis/login.api";
-import { signUp } from "../../apis/signup.api";
+import { signUp, login } from "../../apis/auth.api";
 import Input from "../common/Input";
 import { Alert, Button } from "./style";
 
