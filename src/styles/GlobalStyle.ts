@@ -20,8 +20,6 @@ export const GlobalStyle = createGlobalStyle`
 
   input, button {
     background-color: transparent;
-    border: none;
-    outline: none;
   }
 
   button {
