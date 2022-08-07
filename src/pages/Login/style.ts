@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../styles/colors";
 
-export const StyledRoot = styled.div`
-  margin-top:1rem;
+export const StyledRoot = styled.main`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 `;
 
-export const LoginBox = styled.main`
+export const Box = styled.section`
   background: ${colors.white};
   width: 34rem;
   height: 40rem;
   padding: 2rem 3.4rem;
-  margin: auto;
 
   border-radius: 2rem;
   box-shadow: 0 1px 4px rgb(0 0 0 / 3%), 0 3px 19px rgb(0 0 0 / 12%);

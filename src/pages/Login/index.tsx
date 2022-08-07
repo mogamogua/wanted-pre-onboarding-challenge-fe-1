@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "../../components/LoginForm";
-import { LoginBox, Message, StyledLink, StyledRoot, Title } from "./style";
+import { Box, Message, StyledLink, StyledRoot, Title } from "./style";
 
 function Login() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ function Login() {
 
   return (
     <StyledRoot>
-      <LoginBox>
+      <Box>
         <StyledLink to="/">메인으로</StyledLink>
         <Title>{isLoginPage ? "투두리스트 로그인" : "투두리스트 회원가입"}</Title>
         <LoginForm isLoginPage={isLoginPage} />
@@ -22,7 +22,7 @@ function Login() {
         ) : (
           <StyledLink to="/auth/login">로그인 하러가기</StyledLink>
         )}
-      </LoginBox>
+      </Box>
     </StyledRoot>
   );
 }
