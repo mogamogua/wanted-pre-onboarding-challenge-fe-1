@@ -7,6 +7,7 @@ function Routers() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/:id" element={<Main />} />
         <Route path="/auth/sign_up" element={<Login />} />
         <Route path="/auth/login" element={<Login />} />
       </Routes>
