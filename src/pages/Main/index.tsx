@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getTodos } from "../../apis/todo.api";
 import { todoItemType } from "../../types/todo";
 import { Box } from "../Login/style";
@@ -9,31 +10,35 @@ function Main() {
   const [todoList, setTodoList] = useState<todoItemType[]>([]);
   const token = localStorage.getItem("token");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  const makeTodoList = useCallback(async () => {
+
+  const getTodoListRender = useCallback(async () => {
     if (token) {
       try {
         const { data } = await getTodos(token);
         setTodoList(data);
       } catch (error) {
-        setTodoList([]);
         if (axios.isAxiosError(error)) {
-          console.log(error);
           setMessage(error.message);
         } else {
           console.log(error);
           setMessage("예기치 않은 오류로 목록을 불러올 수 없습니다.");
         }
+        setTodoList([]);
       }
     } else {
-      setTodoList([]);
-      setMessage("목록이 없습니다.");
+      setMessage("로그인하고 목록을 조회하세요");
+
+      setTimeout(() => {
+        navigate("/auth/login");
+      }, 1200);
     }
-  }, [token]);
+  }, [navigate, token]);
 
   useEffect(() => {
-    makeTodoList();
-  }, [makeTodoList, token]);
+    getTodoListRender();
+  }, [getTodoListRender, token]);
 
   return (
     <StyledRoot>
