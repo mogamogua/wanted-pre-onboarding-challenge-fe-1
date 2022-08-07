@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import { LoginBox, Message, StyledLink, StyledRoot, Title } from "./style";
 
 function Login() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  if (token) navigate("/");
+
   return (
     <StyledRoot>
       <LoginBox>
