@@ -11,7 +11,7 @@ export const LoginBox = styled.main`
   background: ${colors.white};
   width: 34rem;
   height: 40rem;
-  padding: 5rem 3.4rem;
+  padding: 2rem 3.4rem;
   margin: auto;
 
   border-radius: 2rem;
@@ -25,6 +25,7 @@ export const Title = styled.h1`
   font-weight: 800;
   font-size: 2.2rem;
   margin-bottom: 6rem;
+  margin-top:3rem;
   color: ${colors.mainBlack};
 `;
 
