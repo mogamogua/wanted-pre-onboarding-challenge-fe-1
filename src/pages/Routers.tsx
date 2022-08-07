@@ -1,18 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import Main from "./pages/Main";
-import SignUp from "./pages/SignUp";
+import Login from "./Login";
+import Main from "./Main";
+import SignUp from "./SignUp";
 
-function Router() {
+function Routers() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Main />} />
         <Route path="/auth/sign_up" element={<SignUp />} />
         <Route path="/auth/login" element={<Login />} />
-        <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default Router;
+export default Routers;
