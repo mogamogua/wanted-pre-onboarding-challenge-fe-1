@@ -7,8 +7,8 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/sign_up" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/auth/sign_up" element={<SignUp />} />
+        <Route path="/auth/login" element={<Login />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
