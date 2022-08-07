@@ -1,8 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import LoginForm from "./LoginForm";
+import LoginForm from "../../components/LoginForm";
 import { LoginBox, Message, StyledLink, StyledRoot, Title } from "./style";
-import { ReactComponent as TodoListIcon } from "../../assets/icons/todoListIcon.svg";
 
 function Login() {
   const navigate = useNavigate();
