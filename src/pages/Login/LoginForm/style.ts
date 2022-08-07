@@ -23,3 +23,12 @@ transition: 300ms;
   background: #413e8a;
 }
 `;
+
+
+export const Alert = styled.p`
+  font-family: Pretendard;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: ${colors.subPurple};
+  margin-top: 1rem;
+`;
